@@ -1,15 +1,19 @@
+import React from 'react';
 import './App.css';
-import NavBar from './components/NavBar';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Navbar from './components/NavBar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Packages from './pages/Packages';
+import Deliveries from './pages/Deliveries';
 
 function App() {
   return (
     <>
       <Router>
-        <NavBar />
-        <switch>
-          <Route path='/' />
-        </switch>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Packages />} />
+          <Route path='/deliveries' element={<Deliveries />} />
+        </Routes>
       </Router>
     </>
   );
