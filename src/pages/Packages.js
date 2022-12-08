@@ -1,11 +1,16 @@
-import React from 'react';
+import * as React from 'react';
+import PackagesList from '../components/PackagesList';
+import TabPanel from '../components/TabPanel';
 
 function Packages() {
+
   return (
-    <div className='packages'>
-      <h1>Packages</h1>
+    <div className='deliveries'>
+      <TabPanel />
+      {/* <PackagesList /> */}
     </div>
   );
 }
+
 
 export default Packages;
